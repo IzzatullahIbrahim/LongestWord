@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Palindrome</title>
+    </head>
+    <body>
+        <h1>
+            Check the Longest word in console.log with longestWord("sentence")
+        </h1>
+
+        <script>
+            //Basic level
+            function longestWord(sentence) {
+                sentence = sentence.split(' ');
+                var longest = 0;
+
+                for (var i = 0; i < sentence.length; i++) {
+                    if (sentence[i].length > longest) {
+                        longest = sentence[i].length;
+                    }
+                }
+
+                return longest;
+            }
+        </script>
+    </body>
+</html>
