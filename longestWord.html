@@ -10,17 +10,36 @@
 
         <script>
             //Basic level
+            // function longestWord(sentence) {
+            //     sentence = sentence.split(' ');
+            //     var longest = 0;
+            //
+            //     for (var i = 0; i < sentence.length; i++) {
+            //         if (sentence[i].length > longest) {
+            //             longest = sentence[i].length;
+            //         }
+            //     }
+            //
+            //     return longest;
+            // }
+
+            //Intermediate level
+            // function longestWord(sentence) {
+            //     return sentence.split(' ').reduce(function(x, y){
+            //         return Math.max(x, y.length);
+            //     }, 0);
+            // }
+
+            //With sort
             function longestWord(sentence) {
                 sentence = sentence.split(' ');
-                var longest = 0;
 
-                for (var i = 0; i < sentence.length; i++) {
-                    if (sentence[i].length > longest) {
-                        longest = sentence[i].length;
-                    }
-                }
+                sentence.sort(function(a, b) {
+                    return b.length - a.length;
+                })
 
-                return longest;
+                // return sentence[0].length;
+                return sentence;
             }
         </script>
     </body>
